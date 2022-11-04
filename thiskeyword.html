@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        //outdside
+        // this.table="window table";
+        // console.log(this.table);
+
+        //acces with function
+        // const acces=function(){
+        //     console.log(`${this.table} welcome to first`);
+
+        // }
+
+        //we can acces this keyword inside the function to we can use call method
+        //   let calls=acces.call(this);
+
+
+        //inside method global
+        // this.house={
+        //     table:"john table",
+        // }
+        // console.log(this.house.table);
+
+        //private
+        // let mirhouse={
+        //     table:"mir table",
+        //now method
+        // clean(){
+        //     console.log(`cleanig ${this.table}`);
+        // }
+        //}
+
+        // console.log(this.mirhouse.table);
+        // console.log(mirhouse.table);
+        // console.log(mirhouse.clean());
+
+        //try to acces the first function in mirhouse object
+
+        // let mir=acces.call(mirhouse);
+
+        //start task
+
+        class student {
+
+            static count = 0;  
+            constructor(name, age, ph_no, marks) {
+                this.name = name;
+                this.age = age;
+                this.ph_no = ph_no;
+                this.marks = marks;
+                student.countStudent();
+
+            }
+            static countStudent() {
+                return (student.count++);    
+
+            }
+
+            eligible() {
+                if (this.marks >= 40) {
+                    console.log(`${this.name} age ${age} is eligible`);
+
+                }
+                else if (this.marks < 40) {
+                    console.log(`${this.name} age ${age} is not eligible`);
+
+                }
+
+            }
+            check(marks){
+                return const=(age)=>{
+                    if(this.marks >=40){
+                        return true;
+                    } )
+                    else{
+                        return false;
+                    }
+                }
+            }
+        }
+
+        const Riya = new student('Riya', 18, 1234, 34);
+        const Hiya = new student('Hiya', 15, 2345, 35);
+        const Diya = new student('Diya', 16, 4567, 60);
+        const Siya = new student('Siya', 17, 7891, 70);
+        const Rooh = new student('Rooh', 19, 3456, 80);
+        const ooh = new student('Ropp', 12, 345556, 8);
+        console.log(student.countStudent());
+
+        Riya.eligible();
+
+        Hiya.eligible();
+
+        Diya.eligible();
+
+        Siya.eligible();
+
+        Rooh.eligible();
+
+
+        // var arrow = (a,b)=>{ 
+        //     return a*b;
+        // }
+        // console.log(arrow(10,20));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
